@@ -1,0 +1,3 @@
+
+Run instances:
+aws ec2 run-instances --image-id ami-084568db4383264d4 --count 1 --instance-type t2.micro --key-name firstInstance --subnet-id subnet-035e11cdb9d92fcc5 --output json
