@@ -1,3 +1,8 @@
 
 Run instances:
 aws ec2 run-instances --image-id ami-084568db4383264d4 --count 1 --instance-type t2.micro --key-name firstInstance --subnet-id subnet-035e11cdb9d92fcc5 --output json
+
+
+Create S3 bucket:
+aws s3api create-bucket --bucket bangbang --output json
+(The S3 bucket name should be unique, no two AWS bucket name can be same)
