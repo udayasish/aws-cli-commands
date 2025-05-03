@@ -11,3 +11,11 @@ aws ec2 run-instances --image-id ami-084568db4383264d4 --count 1 --instance-type
 Create S3 bucket:
 aws s3api create-bucket --bucket bangbang --output json
 (The S3 bucket name should be unique, no two AWS bucket name can be same)
+
+
+Add an inbound rule to allow SSH access (port 22) from your IP:
+aws ec2 authorize-security-group-ingress \
+  --group-id sg-06e94d2d9b5bd4562e \
+  --protocol tcp \
+  --port 22 \
+  --cidr 0.0.0.0/0  # Or replace with "Your.IP.Address/32" for security
